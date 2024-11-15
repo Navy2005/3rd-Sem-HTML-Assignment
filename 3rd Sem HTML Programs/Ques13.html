@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title> Question 13</title>
+</head>
+<body>
+    <H1>Open() Method</H1>
+    <p>Click This Button to open a new window</p>
+    <button onclick="WindowFunc()"> Open Window</button>
+    
+    <hr size="3" noshade="">
+
+    <h1>Prompt() Method</h1>
+    <p>Click This Button to open a new prompt</p>
+    <button onclick="PromptFunc()"> Open Prompt</button>
+    <h2 id="Display" ></h2>
+    
+    <hr size="3" noshade="">
+    
+    <H1>Alert() Method</H1>
+    <p>Click This Button to open a new alert</p>
+    <button onclick="AlertFunc()"> Open Alert</button>
+
+    <script>
+        function WindowFunc(){
+            var myWindow = window.open("", "_blank");
+            myWindow.document.write("<h1> HELLO WORLD </h1>");
+        }
+
+        function PromptFunc(){
+            var name = prompt("Enter Your Name :", "John Doe") ;
+            if (name != null){
+                document.getElementById("Display").innerText= "Hello " + name;
+            }
+        }
+
+        function AlertFunc(){
+            alert("This is an alert");
+        }
+    </script>
+</body>
+</html>

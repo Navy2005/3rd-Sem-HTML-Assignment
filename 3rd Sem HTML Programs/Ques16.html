@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title> Question 16 </title>
+    <style>
+        #main{
+            background-color: gray;
+            width: 125px;
+            border: 3px solid black;
+        }
+    </style>
+</head>
+<body>
+    <div id="main"></div>
+    <script>
+        var t = function Function(){
+            var time = new Date();
+            var hrs = time.getHours();
+            var min = time.getMinutes();
+            var sec = time.getSeconds();
+            document.getElementById("main").innerHTML="Current Time is <br>" + hrs + " : " + min + " : " + sec;
+            }
+        setInterval(t, 1000);
+    </script>
+</body>
+</html> 

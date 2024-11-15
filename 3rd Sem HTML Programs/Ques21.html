@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title> Question 21 </title>
+    <style>
+        .main{
+            color: black;
+            background-color: gray;
+            border: 3px solid black;
+            width: 40%;
+            height: 100px;
+            margin: 3px;
+        }
+    </style>
+</head>
+<body>
+    <div class="main" id align="center">
+        Principal Amount : <input type="number" id="Amount"> <br>
+        Rate Of Interest : <input type="number" id="Rate"> <br>
+        Time in Years : <input type="number" id="Time"> <br>
+        <button onclick="ShowInfo()"> Calculate Simple Interest </button>
+        <button onclick="ClearInfo()"> Clear </button>
+    </div>
+    <div class="main" id="d2"> Enter Information and Press Calculate </div>
+
+    <script>
+        var div = document.getElementById("d2");
+        function ShowInfo(){
+            var P = document.getElementById("Amount");
+            var R = document.getElementById("Rate");
+            var T = document.getElementById("Time");
+            var SI = ((P.value*R.value*T.value)/100);
+            div.innerHTML= "Principal Amount is " + P.value + "<br> Rate Of Interest is " + R.value + "<br> Time : " + T.value + "<br> Simple Interest is " + SI + " Rs.";
+        }
+
+        function ClearInfo(){
+            var P = document.getElementById("Amount");
+            var R = document.getElementById("Rate");
+            var T = document.getElementById("Time");
+            P.value="";
+            R.value="";
+            T.value="";            
+            div.innerHTML="Enter Information and Press Calculate";
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title> Question 17 </title>
+    <style>
+        #main{
+            color: white;
+            background-color: red;
+            border: 3px solid black;
+            width: 250px;
+            height: 50px;
+        }
+    </style>
+</head>
+<body>
+    <p>
+        Name : <input type="text" id="name"> <br>
+        Password : <input type="password" id="pass">
+    </p>
+    <button onclick="ShowInfo()"> Show Information</button>
+    <button onclick="ClearInfo()"> Clear </button>
+    <div id="main"> Enter Information and Press Show Information</div>
+
+    <script>
+        var div = document.getElementById("main");
+        function ShowInfo(){
+            var name = document.getElementById("name");
+            var pass = document.getElementById("pass");
+            div.innerHTML= "Name is " + name.value + "<br> Password is " + pass.value;
+        }
+
+        function ClearInfo(){
+            var name = document.getElementById("name");
+            var pass = document.getElementById("pass");
+            name.value="";
+            pass.value="";            
+            div.innerHTML="Enter Information and Press Show Information";
+        }
+    </script>
+</body>
+</html>

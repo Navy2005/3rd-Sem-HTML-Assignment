@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title> Question 23 </title>
+    <style>
+        #Out{
+            background-color: green;
+            border: 2px solid black;
+            width: 200px;
+            height: 50px;
+            align-content: center;
+            margin-top: 10px;
+        }
+
+        #in{
+            background-color: gray;
+            border: 1px solid black;
+            border-radius: 5px;
+            box-shadow: 5px 5px 7px;
+            width: 175px;
+            height: 35px;
+            align-content: center;
+            margin-left: 10px;
+            padding-left: 3px;
+        }
+    </style>
+
+
+
+    <script language="javascript">   
+        var fn;
+        var p=0
+        var s=0;
+        var m=0;
+        var h=0;
+        function Start(){
+            Interval=setInterval( function(){
+            p++;
+            if(p>=10){
+                p=0;
+                s++;
+                document.getElementById("sec").innerHTML=s;
+            }
+            if(s>=60){
+                s=0;
+                m++;
+                document.getElementById("sec").innerHTML=s;
+                document.getElementById("min").innerHTML=m;
+            }
+            if(m>=60){
+                m=0;
+                h++;
+                document.getElementById("min").innerHTML=m;
+                document.getElementById("hr").innerHTML=h;
+            }
+
+            document.getElementById("p").innerHTML=p;  
+            } , 100);
+        }
+
+        function Stop(){
+            clearInterval(Interval);
+        }
+        </script>
+</head>
+<body>
+    <button onclick="Start()"> Start Stopwatch </button>
+    <button onclick="Stop()"> Stop Stopwatch </button>
+    <br>
+    <div id="Out">
+        <div id="in">
+            Time is                  
+            <span class="col-2" id="hr">00</span> : 
+            <span class="col-2 " id="min">00</span> : 
+            <span class="col-2" id="sec">00</span> :
+            <span class="col-2" id="p">00</span>
+        </div>
+    </div>
+</body>
+</html>
